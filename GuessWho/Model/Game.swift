@@ -93,7 +93,6 @@ extension Game {
             return nil
         case .question(let i):
             let next = i + 1
-            print(next)
             if next < questions.endIndex {
                 return questions[next]
             } else {
