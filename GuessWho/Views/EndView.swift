@@ -39,7 +39,6 @@ struct EndView: View {
                 Spacer()
             }
         }
-        .ignoresSafeArea()
     }
 
 

@@ -11,7 +11,6 @@ final class PhotoAnswerViewModel: ObservableObject {
     private let question: Question
 
     init(question: Question) {
-        print("photo answer view model for question", question.number)
         self.question = question
     }
 

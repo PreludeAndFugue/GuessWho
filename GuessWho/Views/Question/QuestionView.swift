@@ -9,18 +9,21 @@ import SwiftUI
 
 struct QuestionView: View {
     @EnvironmentObject var coordinator: Coordinator
-    let question: Question
     @State var isAnswered = false
+    @State private var showNextQuestion = false
 
-
-    init(question: Question) {
-        print("question view init", question.number)
-        self.question = question
-    }
+    let question: Question
 
 
     var body: some View {
         ZStack {
+            NavigationLink(
+                destination: nextQuestion(),
+                isActive: $showNextQuestion
+            ) {
+                EmptyView()
+            }
+
             Color.appBackground
 
             VStack {
@@ -30,7 +33,8 @@ struct QuestionView: View {
 
                 PhotoAnswerView(
                     viewModel: .init(question: question),
-                    isAnswered: $isAnswered
+                    isAnswered: $isAnswered,
+                    showNextQuestion: $showNextQuestion
                 )
 
                 Text("Who is this?")
@@ -47,13 +51,23 @@ struct QuestionView: View {
             }
         }
         .ignoresSafeArea()
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
 
 
     func select(girl: Girl) {
         coordinator.select(girl: girl, question: question)
         isAnswered = true
-        print("select girl", girl)
+    }
+
+
+    func nextQuestion() -> some View {
+        if let question = coordinator.nextQuestion() {
+            return AnyView(QuestionView(question: question))
+        } else {
+            return AnyView(EmptyView())
+        }
     }
 }
 

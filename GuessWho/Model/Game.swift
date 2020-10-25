@@ -38,12 +38,6 @@ extension Game {
     }
 
 
-    var isDone: Bool {
-        return questions.map({ $0.isAnswered })
-            .reduce(true, { result, value in result && value })
-    }
-
-
     var feedback: String {
         switch score {
         case 0...1:
@@ -70,6 +64,16 @@ extension Game {
     }
 
 
+    var isDone: Bool {
+        switch state {
+        case .done:
+            return true
+        default:
+            return false
+        }
+    }
+
+
     func answerQuestion(with girl: Girl) {
         switch state {
         case .question(let i):
@@ -79,6 +83,22 @@ extension Game {
             updateState()
         case .done:
             return
+        }
+    }
+
+
+    func nextQuestion() -> Question? {
+        switch state {
+        case .done:
+            return nil
+        case .question(let i):
+            let next = i + 1
+            print(next)
+            if next < questions.endIndex {
+                return questions[next]
+            } else {
+                return nil
+            }
         }
     }
 }

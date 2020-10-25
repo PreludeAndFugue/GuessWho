@@ -18,11 +18,8 @@ struct MainView: View {
                 StartView(start: coordinator.start)
                     .transition(transition)
             } else if coordinator.state == .playing {
-                QuestionContainerView(
-                    questions: coordinator.questions,
-                    selectedQuestion: $coordinator.currentQuestionNumber
-                )
-                .transition(transition)
+                QuestionContainerView(question: coordinator.questions[0])
+                    .transition(transition)
             } else if coordinator.state == .end {
                 EndView()
                     .transition(transition)
@@ -34,7 +31,7 @@ struct MainView: View {
 
     private var transition: AnyTransition {
         AnyTransition.scale
-//            .combined(with: AnyTransition.opacity)
+            .combined(with: AnyTransition.opacity)
     }
 }
 

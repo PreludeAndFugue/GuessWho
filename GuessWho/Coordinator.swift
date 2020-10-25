@@ -17,7 +17,6 @@ final class Coordinator: ObservableObject {
     private var services: Services
 
     @Published var state: State = .start
-    @Published var currentQuestionNumber = 1
     var game: Game!
 
 
@@ -41,6 +40,11 @@ final class Coordinator: ObservableObject {
     }
 
 
+    var isDone: Bool {
+        game.isDone
+    }
+
+
     func start() {
         game = services.gameFactory.newGame()
         withAnimation {
@@ -55,21 +59,21 @@ final class Coordinator: ObservableObject {
     }
 
 
-    func nextQuestion() {
-        if game.isDone {
-            withAnimation {
-                state = .end
-            }
-        } else {
-            withAnimation {
-                currentQuestionNumber += 1
-            }
+    func nextQuestion() -> Question? {
+        game.nextQuestion()
+    }
+
+
+    func endGame() {
+        withAnimation {
+            state = .end
         }
     }
 
 
     func home() {
-        state = .start
-        currentQuestionNumber = 1
+        withAnimation {
+            state = .start
+        }
     }
 }

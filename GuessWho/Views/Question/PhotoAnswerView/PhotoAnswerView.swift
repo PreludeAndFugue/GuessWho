@@ -11,6 +11,7 @@ struct PhotoAnswerView: View {
     @EnvironmentObject var coordinator: Coordinator
     @ObservedObject var viewModel: PhotoAnswerViewModel
     @Binding var isAnswered: Bool
+    @Binding var showNextQuestion: Bool
 
     var body: some View {
         ZStack {
@@ -58,8 +59,11 @@ struct PhotoAnswerView: View {
 
 
     private func next() {
-        print("next")
-        coordinator.nextQuestion()
+        if coordinator.isDone {
+            coordinator.endGame()
+        } else {
+            showNextQuestion = true
+        }
     }
 }
 
@@ -78,8 +82,16 @@ struct PhotoAnswerView_Previews: PreviewProvider {
 
     static var previews: some View {
         Group {
-            PhotoAnswerView(viewModel: vm1, isAnswered: .constant(false))
-            PhotoAnswerView(viewModel: vm2, isAnswered: .constant(true))
+            PhotoAnswerView(
+                viewModel: vm1,
+                isAnswered: .constant(false),
+                showNextQuestion: .constant(false)
+            )
+            PhotoAnswerView(
+                viewModel: vm2,
+                isAnswered: .constant(true),
+                showNextQuestion: .constant(false)
+            )
         }
         .previewLayout(.sizeThatFits)
     }

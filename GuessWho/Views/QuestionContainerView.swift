@@ -8,19 +8,16 @@
 import SwiftUI
 
 struct QuestionContainerView: View {
-    let questions: [Question]
-    @Binding var selectedQuestion: Int
+    let question: Question
     
     var body: some View {
-        TabView(selection: $selectedQuestion) {
-            ForEach(questions) { question in
+        NavigationView {
+            ZStack {
+                Color.appBackground
+
                 QuestionView(question: question)
-                    .tag(question.number)
             }
         }
-        .background(Color.red)
-        .ignoresSafeArea(.all, edges: .all)
-        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
     }
 }
 
@@ -46,10 +43,7 @@ struct QuestionContainerView_Previews: PreviewProvider {
     )
 
     static var previews: some View {
-        QuestionContainerView(
-            questions: [question1, question2, question3],
-            selectedQuestion: .constant(1)
-        )
+        QuestionContainerView(question: question1)
     }
 }
 #endif
