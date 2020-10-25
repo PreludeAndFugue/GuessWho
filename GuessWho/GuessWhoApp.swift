@@ -9,9 +9,21 @@ import SwiftUI
 
 @main
 struct GuessWhoApp: App {
+    private let coordinator: Coordinator
+    private let services: Services
+
+
+    init() {
+        let services = Services()
+        self.services = services
+        self.coordinator = Coordinator(services: services)
+    }
+
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
+                .environmentObject(coordinator)
         }
     }
 }
