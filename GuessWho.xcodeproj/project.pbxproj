@@ -23,6 +23,8 @@
 		4E9B86D125438AC0007B79FB /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9B86C925438AC0007B79FB /* Services.swift */; };
 		4E9B86D425438F07007B79FB /* QuestionContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9B86D325438F07007B79FB /* QuestionContainerView.swift */; };
 		4E9B86D8254390BD007B79FB /* QuestionAnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9B86D7254390BD007B79FB /* QuestionAnswerView.swift */; };
+		4EA353DE2545ED5100F259A3 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA353DD2545ED5100F259A3 /* ResultsView.swift */; };
+		4EA353E22545EEB900F259A3 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA353E12545EEB900F259A3 /* ResultView.swift */; };
 		4ED86DC62543823500F6C4D4 /* GuessWhoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED86DC52543823500F6C4D4 /* GuessWhoApp.swift */; };
 		4ED86DC82543823500F6C4D4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED86DC72543823500F6C4D4 /* MainView.swift */; };
 		4ED86DCA2543823500F6C4D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED86DC92543823500F6C4D4 /* Assets.xcassets */; };
@@ -66,6 +68,8 @@
 		4E9B86C925438AC0007B79FB /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		4E9B86D325438F07007B79FB /* QuestionContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionContainerView.swift; sourceTree = "<group>"; };
 		4E9B86D7254390BD007B79FB /* QuestionAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswerView.swift; sourceTree = "<group>"; };
+		4EA353DD2545ED5100F259A3 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		4EA353E12545EEB900F259A3 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		4ED86DC22543823500F6C4D4 /* GuessWho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessWho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED86DC52543823500F6C4D4 /* GuessWhoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessWhoApp.swift; sourceTree = "<group>"; };
 		4ED86DC72543823500F6C4D4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -148,6 +152,15 @@
 			path = Question;
 			sourceTree = "<group>";
 		};
+		4EA353E02545EEA500F259A3 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				4EA353DD2545ED5100F259A3 /* ResultsView.swift */,
+				4EA353E12545EEB900F259A3 /* ResultView.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
 		4ED86DB92543823500F6C4D4 = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				4E9B86D6254390AF007B79FB /* Question */,
+				4EA353E02545EEA500F259A3 /* Results */,
 				4ED86DC72543823500F6C4D4 /* MainView.swift */,
 				4EDDFD2525439BCD00B0EBF9 /* StartView.swift */,
 				4E9B86D325438F07007B79FB /* QuestionContainerView.swift */,
@@ -324,6 +338,7 @@
 				4E9B86CD25438AC0007B79FB /* Game.swift in Sources */,
 				4E9B86B7254388CD007B79FB /* QuestionView.swift in Sources */,
 				4E9B86D125438AC0007B79FB /* Services.swift in Sources */,
+				4EA353DE2545ED5100F259A3 /* ResultsView.swift in Sources */,
 				4E9B86CF25438AC0007B79FB /* PhotoFactory.swift in Sources */,
 				4E9B86CC25438AC0007B79FB /* Girl.swift in Sources */,
 				4E9B86D8254390BD007B79FB /* QuestionAnswerView.swift in Sources */,
@@ -332,6 +347,7 @@
 				4E9B86BF2543892E007B79FB /* Color+Extension.swift in Sources */,
 				4E9B86BB25438921007B79FB /* Font+Extension.swift in Sources */,
 				4EDDFD2625439BCD00B0EBF9 /* StartView.swift in Sources */,
+				4EA353E22545EEB900F259A3 /* ResultView.swift in Sources */,
 				4E9B86B4254387F2007B79FB /* EndView.swift in Sources */,
 				4EDDFD23254399A400B0EBF9 /* Coordinator.swift in Sources */,
 				4E9B86D425438F07007B79FB /* QuestionContainerView.swift in Sources */,
