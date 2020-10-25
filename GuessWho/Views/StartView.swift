@@ -34,13 +34,8 @@ struct StartView: View {
 
                 Button(action: newGame) {
                     Text("NEW GAME")
-                        .foregroundColor(.white)
-                        .font(.appFont(size: 30))
                 }
-                .foregroundColor(.appButtonText)
-                .padding()
-                .background(Color.appButtonBackground)
-                .cornerRadius(16)
+                .modifier(AppButton())
 
                 Spacer()
             }

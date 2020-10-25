@@ -26,12 +26,8 @@ struct PhotoAnswerView: View {
 
                 Button(action: next) {
                     Text("Next")
-                        .font(.appFont(size: 30))
-                        .foregroundColor(.appButtonText)
                 }
-                .padding()
-                .background(Color.appButtonBackground)
-                .cornerRadius(16)
+                .modifier(AppButton())
             }
             .frame(width: 350, height: 280)
             .background(Color.appPhotoBackground)

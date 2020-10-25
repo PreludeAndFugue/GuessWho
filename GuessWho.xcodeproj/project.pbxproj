@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E3F73382546180600677399 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3F73372546180600677399 /* AppButton.swift */; };
 		4E4F5A13254447F70052F1B5 /* PhotoAnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F5A12254447F70052F1B5 /* PhotoAnswerView.swift */; };
 		4E4F5A17254470020052F1B5 /* PhotoAnswerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4F5A16254470020052F1B5 /* PhotoAnswerViewModel.swift */; };
 		4E9B86B4254387F2007B79FB /* EndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9B86B3254387F2007B79FB /* EndView.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E3F73372546180600677399 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		4E4F5A12254447F70052F1B5 /* PhotoAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAnswerView.swift; sourceTree = "<group>"; };
 		4E4F5A16254470020052F1B5 /* PhotoAnswerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAnswerViewModel.swift; sourceTree = "<group>"; };
 		4E9B86B3254387F2007B79FB /* EndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E3F7336254617F600677399 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				4E3F73372546180600677399 /* AppButton.swift */,
+			);
+			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
 		4E4F5A1525446FEE0052F1B5 /* PhotoAnswerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +193,7 @@
 				4E9B86C125438A91007B79FB /* Model */,
 				4E9B86B9254388FE007B79FB /* Extensions */,
 				4ED86DD72543828F00F6C4D4 /* Content */,
+				4E3F7336254617F600677399 /* ViewModifiers */,
 				4ED86DD62543825C00F6C4D4 /* Views */,
 				4ED86DC52543823500F6C4D4 /* GuessWhoApp.swift */,
 				4EDDFD22254399A400B0EBF9 /* Coordinator.swift */,
@@ -338,6 +349,7 @@
 				4E9B86CD25438AC0007B79FB /* Game.swift in Sources */,
 				4E9B86B7254388CD007B79FB /* QuestionView.swift in Sources */,
 				4E9B86D125438AC0007B79FB /* Services.swift in Sources */,
+				4E3F73382546180600677399 /* AppButton.swift in Sources */,
 				4EA353DE2545ED5100F259A3 /* ResultsView.swift in Sources */,
 				4E9B86CF25438AC0007B79FB /* PhotoFactory.swift in Sources */,
 				4E9B86CC25438AC0007B79FB /* Girl.swift in Sources */,

@@ -30,22 +30,14 @@ struct EndView: View {
 
                 Button(action: results) {
                     Text("RESULTS")
-                        .foregroundColor(.appButtonText)
-                        .font(.appFont(size: 30))
                 }
-                .padding()
-                .background(Color.appButtonBackground)
-                .cornerRadius(16)
+                .modifier(AppButton())
                 .padding(.bottom, 20)
 
                 Button(action: home) {
                     Text("HOME")
-                        .foregroundColor(.appButtonText)
-                        .font(.appFont(size: 30))
                 }
-                .padding()
-                .background(Color.appButtonBackground)
-                .cornerRadius(16)
+                .modifier(AppButton())
 
                 Spacer()
             }
