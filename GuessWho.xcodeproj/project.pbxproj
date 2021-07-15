@@ -56,6 +56,7 @@
 		4E3F73372546180600677399 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		4E4F5A12254447F70052F1B5 /* PhotoAnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAnswerView.swift; sourceTree = "<group>"; };
 		4E4F5A16254470020052F1B5 /* PhotoAnswerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAnswerViewModel.swift; sourceTree = "<group>"; };
+		4E6ED47025DD87D400B16280 /* GuessWho.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GuessWho.entitlements; sourceTree = "<group>"; };
 		4E9B86B3254387F2007B79FB /* EndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndView.swift; sourceTree = "<group>"; };
 		4E9B86B6254388CD007B79FB /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		4E9B86BA25438921007B79FB /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
@@ -190,6 +191,7 @@
 		4ED86DC42543823500F6C4D4 /* GuessWho */ = {
 			isa = PBXGroup;
 			children = (
+				4E6ED47025DD87D400B16280 /* GuessWho.entitlements */,
 				4E9B86C125438A91007B79FB /* Model */,
 				4E9B86B9254388FE007B79FB /* Extensions */,
 				4ED86DD72543828F00F6C4D4 /* Content */,
@@ -495,6 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GuessWho/GuessWho.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GuessWho/Preview Content\"";
 				DEVELOPMENT_TEAM = T59AZ797LW;
@@ -507,6 +510,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.preludeandfugue.GuessWho;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -517,6 +521,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GuessWho/GuessWho.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GuessWho/Preview Content\"";
 				DEVELOPMENT_TEAM = T59AZ797LW;
@@ -529,6 +534,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.preludeandfugue.GuessWho;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
